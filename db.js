@@ -1,9 +1,9 @@
 const Sequelize = require("sequelize");
 
 const sequelize = new Sequelize(
-  "blue-server-challenges",
-  "postgres",
-  "PassWordGoesHere",
+  "blue-server-challenges", //name of the database, no name? it can't connect
+  "postgres", //type of database
+  "pw", //password for your database
   {
     host: "localhost",
     dialect: "postgres",
@@ -20,3 +20,4 @@ sequelize.authenticate().then(
 );
 
 module.exports = sequelize;
+
