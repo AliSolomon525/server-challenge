@@ -14,7 +14,7 @@ router.post('/create', function(req, res){
             let token = jwt.sign({id: user.id}, "i_am_secret", {expiresIn: 60*60*48})
             res.status(200).json({
                 user: user,
-                token: token
+                sessionToken: token
             })
             })
         .catch(function(err) {
